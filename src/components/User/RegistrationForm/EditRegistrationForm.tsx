@@ -10,10 +10,10 @@ import { IoCheckmarkDoneSharp } from "react-icons/io5";
 
 import { RegisterationFormStyle, type FormData } from "./types";
 
-import logo from "../../assets/logo.png";
+import logo from "../../../assets/logo.png";
 import { Link } from "react-router-dom";
 
-const NewRegistrationForm: React.FC = () => {
+const EditRegistrationForm: React.FC = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState<FormData>({
     father: {
@@ -90,16 +90,6 @@ const NewRegistrationForm: React.FC = () => {
         : step === 3
         ? formData.father
         : formData.mother;
-    // if ("nameBurmese" in member && !member.nameBurmese.trim()) {
-    //   newErrors.nameBurmese = "This field is required";
-    // }
-    // if ("nameEnglish" in member && !member.nameEnglish.trim()) {
-    //   newErrors.nameEnglish = "This field is required";
-    // }
-
-    // if ("phone" in member && !member.phone) {
-    //   newErrors.phone = "This field is required";
-    // }
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -189,26 +179,8 @@ const NewRegistrationForm: React.FC = () => {
             <div className="relative w-full text-green-600 text-2xl font-bold">
               {/* Center title */}
               <h1 className="text-center">
-                Registration form submitted successfully!
+                Registration form Edited successfully!
               </h1>
-
-              {/* <div data-aos="fade-up" className="flex items-center gap-4 ">
-                <IoCheckmarkDoneSharp className="text-4xl h-12 w-12 p-4 text-smallBlue " />
-                <p className="text-sm text-black">
-                  ကျောင်းသားရေးရာမှ အချက်အလက်များမှန်/မမှန် စစ်ဆေးပြီး
-                  (၂၄နာရီအတွင်း)အတည်ပြုပေးပါမည်။
-                </p>
-              </div>
-             
-              {currentStep >= 4 && (
-                <Link
-                  to="/"
-                  className="absolute right-0 top-1/2 -translate-y-1/2 inline-flex items-center gap-1 text-darkBlue hover:underline font-bold px-3 py-2 rounded-lg transition-colors"
-                >
-                  <RiArrowGoBackFill className="text-lg" />
-                  <span className="text-black text-sm">Back To Home</span>
-                </Link>
-              )} */}
 
               <div className="relative">
                 <div
@@ -234,36 +206,8 @@ const NewRegistrationForm: React.FC = () => {
                     </Link>
                   </div>
                 )}
-
-                {/* {currentStep >= 4 && (
-                  <Link
-                    to="/"
-                    className="inline-flex items-center gap-1  font-bold px-3 py-2 rounded-lg transition-colors"
-                  >
-                   
-                    <span className=" text-sm bg-green-700 p-3 rounded-lg text-white hover:bg-green-600">
-                      Back To Home
-                    </span>
-                  </Link>
-                )} */}
               </div>
             </div>
-
-            // <div className="text-center text-green-600 text-2xl font-bold  ">
-            //   <h1>Form submitted successfully!</h1>
-
-            //   {currentStep >= 4 && (
-            //     <Link
-            //       to="/"
-            //       className="inline-block items-center justify-center gap-0 text-darkBlue hover:underline font-bold px-3 py-2 rounded-lg transition-colors  "
-            //     >
-            //       <span className="text-black  text-sm">
-            //         <RiArrowGoBackFill className="text-lg font-bold inline-block mb-1" />
-            //         Back To Home
-            //       </span>
-            //     </Link>
-            //   )}
-            // </div>
           )}
         </div>
 
@@ -310,4 +254,4 @@ const NewRegistrationForm: React.FC = () => {
   );
 };
 
-export default NewRegistrationForm;
+export default EditRegistrationForm;

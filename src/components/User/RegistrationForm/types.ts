@@ -1,5 +1,3 @@
-// import { main } from "framer-motion/client";
-
 export interface FamilyMember {
   // name: string;
   // email: string;

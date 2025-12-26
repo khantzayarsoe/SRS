@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { MdMenu, MdAccountCircle, MdClose } from "react-icons/md";
-import logo from "../../assets/logo.png";
+// import logo from "../../assets/logo.png";
+import logo from "../../../assets/logo.png";
 
 import Content from "../HeroSection/Content";
 import RegisterSlide from "../HeroSection/RegisterSlide";
@@ -12,8 +13,9 @@ import "aos/dist/aos.css";
 const NavbarMenu = [
   { id: 1, title: "Home", link: "/" },
   { id: 2, title: "Help", link: "/Help" },
-  { id: 3, title: "ContactUs", link: "/ContactUs" },
-  { id: 4, title: "Logout", link: "/Logout" },
+  { id: 3, title: "Contact ", link: "/ContactUs" },
+  { id: 4, title: "About Us", link: "/AboutUs" },
+  { id: 5, title: "Logout", link: "/Logout" },
 ];
 
 const Home = () => {
@@ -48,7 +50,7 @@ const Home = () => {
     <>
       <div className="min-h-[1000px]">
         <div className="relative min-h-[700px] bg-[url('/src/assets/mainbuilding.jpg')] bg-cover bg-no-repeat bg-center text-white">
-          <div className="absolute inset-0 bg-blue-500/40"></div>
+          <div className="absolute inset-0 bg-darkBlue/60"></div>
 
           <div className="absolute bottom-0 left-0 w-full overflow-hidden">
             <svg
@@ -95,7 +97,7 @@ const Home = () => {
                     <li key={item.id}>
                       <Link
                         to={item.link}
-                        className="inline-block text-sm py-2 px-3 uppercase hover:text-blue-400 transition-colors duration-300"
+                        className="inline-block text-sm py-10 px-9 uppercase hover:text-gray-400 transition-colors duration-300"
                       >
                         {item.title}
                       </Link>
@@ -133,11 +135,11 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Mobile Menu List - appears as dropdown */}
+            {/* Mobile Menu List  */}
             {isMenuOpen && (
               <div
                 data-aos="slide-down"
-                className="md:hidden bg-darkBlue shadow-lg text-xs"
+                className="md:hidden  shadow-lg text-xs  bg-darkBlue/30 backdrop-blur-md"
               >
                 <ul className="flex flex-col text-center items-center py-1 justify-center">
                   {NavbarMenu.map((item) => (
@@ -145,7 +147,7 @@ const Home = () => {
                       <Link
                         to={item.link}
                         onClick={handleNavClick}
-                        className="flex items-center px-6 py-3 text-lg font-medium  transition-all duration-200"
+                        className="flex items-center px-6 py-3 text-lg font-medium  transition-all duration-200 hover:text-gray-400"
                       >
                         {item.title}
                       </Link>

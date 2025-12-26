@@ -50,7 +50,7 @@ const Registered = () => {
         <div data-aos="fade-up" className="flex items-center gap-4 ">
           {/* border border-smallBlue */}
           <Link
-            to="/RegistrationForm"
+            to="/EditRegistrationForm"
             // href="#"
             className={HeroContentStyle.registerButton}
           >

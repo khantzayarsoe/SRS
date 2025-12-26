@@ -12,6 +12,7 @@ export default {
         primary: "#aa6d6b",
         darkBlue: "#1e73be",
         smallBlue: "#68a4c4",
+        teal: "#4B9DA9",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],

@@ -12,7 +12,7 @@ import ApproveRegister from "./Informations/ApproveRegister";
 import RejectRegister from "./Informations/RejectRegister";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import BuildingImg from "../../assets/mainbuilding.jpg";
+import BuildingImg from "../../../assets/mainbuilding.jpg";
 
 const Content = () => {
   useEffect(() => {
@@ -57,10 +57,10 @@ const Content = () => {
                 မြန်မှန်တွက်ချက်တိုင်းပြည်တွက်
               </p>
               <NotRegister />
-              {/* 
-            <Registered />
-            <ApproveRegister />
-            <RejectRegister /> */}
+
+              {/* <Registered /> */}
+              {/* <ApproveRegister /> */}
+              {/* <RejectRegister />  */}
             </div>
           </div>
         </div>
